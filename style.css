@@ -1,15 +1,23 @@
+html {
+  scroll-behavior: smooth; /* fallback pentru browsere moderne */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  text-align: center;
-  padding: 50px;
+  padding-top: 80px; /* să nu fie acoperit de header */
 }
 
-h1 {
-  color: #2c3e50;
+nav a {
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-p {
-  font-size: 18px;
-  color: #555;
+nav a:hover {
+  color: #e67e22;
 }

@@ -8,7 +8,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* HEADER fix */
+/* HEADER full-width */
 header {
   position: fixed;
   top: 0;
@@ -18,36 +18,15 @@ header {
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   display: flex;
-  justify-content: center; /* center horizontal */
-  align-items: center;     /* center vertical */
+  justify-content: center; /* titlu centrat */
+  align-items: center;
   padding: 15px 20px;
 }
 
 header nav {
   position: absolute;
-  right: 20px;  /* meniul se mută în dreapta */
+  right: 20px;
   display: flex;
-  gap: 15px;
-}
-
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-header nav {
-  display: flex;
-  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -67,16 +46,13 @@ body {
   padding-top: 90px;
 }
 
-/* Secțiuni */
+/* SECȚIUNI */
 section {
-  padding: 80px 20px;
+  padding: 40px 20px; /* Home mai îngust */
   text-align: center;
 }
-#home {
-  background: #ecf0f1;
-  padding: 40px 20px; /* înainte era 80px sus-jos, acum 40px */
-  text-align: center;
-}
+
+#home { background: #ecf0f1; }
 #servicii { background: #bdc3c7; }
 #portofoliu { background: #ecf0f1; }
 #contact { background: linear-gradient(135deg, #bdc3c7, #ecf0f1); }
@@ -111,6 +87,7 @@ section {
 
 .portofoliu-card img {
   width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 

@@ -1,37 +1,40 @@
-/* FONT și reset */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', Arial, sans-serif;
-  line-height: 1.6;
-  background: #f5f5f5;
-  color: #333;
-}
-
-/* HEADER fix și meniu */
+/* HEADER fix cu Flexbox */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #000; /* fundal negru */
+  background-color: #000;
   color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
+/* Container pentru aliniere flex */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* spațiu între titlu și meniu */
+  align-items: center;
+  padding: 15px 20px; /* padding mai mic ca să nu iasă din ecran */
+  max-width: 1200px; /* pentru desktop */
+  margin: 0 auto; /* centrat */
+}
+
+/* Titlu */
 header h1 {
   margin: 0;
   font-size: 24px;
 }
 
+/* Meniu navigare */
+header nav {
+  display: flex;
+  flex-wrap: wrap; /* dacă e prea mic ecranul, linkurile merg pe linia următoare */
+  gap: 15px; /* distanță între linkuri */
+}
+
 header nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
   font-weight: bold;
   transition: color 0.3s;
 }
@@ -45,51 +48,6 @@ body {
   padding-top: 90px;
 }
 
-/* Secțiuni */
-section {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#home { background: #ecf0f1; }
-#servicii { background: #bdc3c7; }
-#portofoliu { background: #ecf0f1; }
-#contact { background: #bdc3c7; }
-
-/* PORTOFOLIU - carduri */
-.portofoliu-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.portofoliu-card {
-  background: white;
-  width: 250px;
-  margin: 15px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-}
-
-.portofoliu-card img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.portofoliu-card:hover {
-  transform: translateY(-5px);
-}
-
-/* FOOTER */
-footer {
-  background: #2c3e50;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-}
 
 /* Smooth scroll fallback */
 html {

@@ -1,4 +1,14 @@
-/* HEADER fix cu Flexbox */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* HEADER fix */
 header {
   position: fixed;
   top: 0;
@@ -9,27 +19,24 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Container pentru aliniere flex */
 .header-container {
   display: flex;
-  justify-content: space-between; /* spațiu între titlu și meniu */
+  justify-content: space-between;
   align-items: center;
-  padding: 15px 20px; /* padding mai mic ca să nu iasă din ecran */
-  max-width: 1200px; /* pentru desktop */
-  margin: 0 auto; /* centrat */
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Titlu */
 header h1 {
   margin: 0;
   font-size: 24px;
 }
 
-/* Meniu navigare */
 header nav {
   display: flex;
-  flex-wrap: wrap; /* dacă e prea mic ecranul, linkurile merg pe linia următoare */
-  gap: 15px; /* distanță între linkuri */
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 header nav a {
@@ -43,14 +50,81 @@ header nav a:hover {
   color: #e67e22;
 }
 
-/* Padding pentru scroll sub header */
+/* padding pentru scroll sub header */
 body {
   padding-top: 90px;
 }
 
-
-/* Smooth scroll fallback */
-html {
-  scroll-behavior: smooth;
+/* Secțiuni */
+section {
+  padding: 80px 20px;
+  text-align: center;
 }
 
+#home { background: #ecf0f1; }
+#servicii { background: #bdc3c7; }
+#portofoliu { background: #ecf0f1; }
+#contact { background: linear-gradient(135deg, #bdc3c7, #ecf0f1); }
+
+/* SERVICII */
+#servicii ul {
+  list-style: none;
+  padding: 0;
+}
+
+#servicii li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* PORTOFOLIU */
+.portofoliu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portofoliu-card {
+  background: white;
+  width: 250px;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.portofoliu-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.portofoliu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* CONTACT card */
+.contact-card {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact-card p {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+/* FOOTER */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}

@@ -1,14 +1,15 @@
+/* FONTURI */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background: #f5f5f5;
   color: #333;
   scroll-behavior: smooth;
 }
 
-/* HEADER full-width, titlu centrat, meniul în dreapta */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -16,38 +17,39 @@ header {
   background-color: #000;
   color: white;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  box-sizing: border-box;
   height: 60px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  box-sizing: border-box;
 }
 
 header h1 {
-  margin: 0 auto; /* titlu centrat */
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 header nav {
   display: flex;
   gap: 15px;
-  margin-left: auto; /* meniul se duce în dreapta */
+  margin-left: auto;
 }
 
 header nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 header nav a:hover {
   color: #e67e22;
 }
 
-/* padding pentru scroll sub header */
-body {
-  padding-top: 70px;
-}
+/* PAD PENTRU SCROLL */
+body { padding-top: 70px; }
 
 /* SECȚIUNI */
 section {
@@ -85,21 +87,22 @@ section {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .portofoliu-card img {
   width: 100%;
-  height: 200px;       /* toate imaginile la aceeași înălțime */
-  object-fit: cover;    /* se taie proporțional pentru uniformitate */
+  height: 200px;
+  object-fit: cover;
   border-radius: 5px;
 }
 
 .portofoliu-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* CONTACT card */
+/* CONTACT CARD */
 .contact-card {
   max-width: 400px;
   width: 100%;
@@ -114,7 +117,15 @@ section {
 .contact-card p {
   margin: 15px 0;
   font-size: 18px;
-  color: #333;
+}
+
+.contact-card a {
+  color: #e67e22;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -126,12 +137,23 @@ footer {
   font-size: 14px;
 }
 
-/* Responsive */
+/* ANIMATII FADE-IN */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     height: auto;
-    padding: 10px;
   }
   header nav {
     flex-wrap: wrap;

@@ -87,7 +87,9 @@ section {
 
 .portofoliu-card img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: contain; /* imaginea se scalează să fie complet vizibilă */
+  background-color: #fff; /* spațiu gol în jur dacă imaginea nu umple cardul */
   border-radius: 5px;
 }
 

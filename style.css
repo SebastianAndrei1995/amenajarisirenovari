@@ -1,4 +1,4 @@
-/* Reset și font */
+/* FONT și reset */
 body {
   margin: 0;
   padding: 0;
@@ -8,12 +8,12 @@ body {
   color: #333;
 }
 
-/* Header fix */
+/* HEADER fix și meniu */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #2c3e50;
+  background-color: #000; /* fundal negru */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -51,31 +51,26 @@ section {
   text-align: center;
 }
 
-#home {
-  background: #ecf0f1;
+#home { background: #ecf0f1; }
+#servicii { background: #bdc3c7; }
+#portofoliu { background: #ecf0f1; }
+#contact { background: #bdc3c7; }
+
+/* PORTOFOLIU - carduri */
+.portofoliu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-#servicii {
-  background: #bdc3c7;
-}
-
-#portofoliu {
-  background: #ecf0f1;
-}
-
-#contact {
-  background: #bdc3c7;
-}
-
-/* Portofoliu - carduri */
 .portofoliu-card {
-  display: inline-block;
   background: white;
   width: 250px;
   margin: 15px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
 }
 
 .portofoliu-card img {
@@ -83,12 +78,21 @@ section {
   border-radius: 5px;
 }
 
-/* Footer */
+.portofoliu-card:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
 footer {
   background: #2c3e50;
   color: white;
   text-align: center;
   padding: 20px;
   font-size: 14px;
+}
+
+/* Smooth scroll fallback */
+html {
+  scroll-behavior: smooth;
 }
 

@@ -17,7 +17,19 @@ header {
   color: white;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center; /* center horizontal */
+  align-items: center;     /* center vertical */
+  padding: 15px 20px;
 }
+
+header nav {
+  position: absolute;
+  right: 20px;  /* meniul se mută în dreapta */
+  display: flex;
+  gap: 15px;
+}
+
 
 .header-container {
   display: flex;

@@ -60,8 +60,11 @@ section {
   padding: 80px 20px;
   text-align: center;
 }
-
-#home { background: #ecf0f1; }
+#home {
+  background: #ecf0f1;
+  padding: 40px 20px; /* înainte era 80px sus-jos, acum 40px */
+  text-align: center;
+}
 #servicii { background: #bdc3c7; }
 #portofoliu { background: #ecf0f1; }
 #contact { background: linear-gradient(135deg, #bdc3c7, #ecf0f1); }

@@ -127,6 +127,11 @@ section {
 .contact-card a:hover {
   text-decoration: underline;
 }
+.contact-card iframe {
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
 
 /* FOOTER */
 footer {
